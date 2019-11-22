@@ -1,0 +1,33 @@
+初始化Git仓库
+git init
+
+添加文件到Git仓库
+git add <file>
+git commit -m <message>
+
+查看工作区状态
+git status
+查看修改/不同处
+git diff
+
+撤销工作区文件修改
+git checkout -- <file>
+撤销暂存区的文件修改
+git reset HEAD <file>
+git checkout -- <file>
+
+
+添加远程仓库（Github）
+1. 在主机生成SSH Key：
+$ ssh-keygen -t rsa - C "youremail@example.com"
+2. Github添加SSH Keys认证：
+SSH Keys \ Add SSH Keys \ Keys:
+输入生成的id_rsa.pub文件内容
+3. Github中新建仓库:
+"Create a new repo"
+4. 为本地Git添加远程主机：
+git remote add origin git@github.com:<yourgit-username>/<yourgit-reponame>.git
+5. 第1次推送Git至远程主机：
+git push -u origin master
+之后的提交：
+git push origin master
